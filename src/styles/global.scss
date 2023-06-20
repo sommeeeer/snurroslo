@@ -1,0 +1,42 @@
+// FONT VARIABLES
+@font-face {
+  font-family: 'miracleregular';
+  src: url('/fonts/miracle-webfont.woff2') format('woff2'),
+    url('/fonts/miracle-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// COLORS
+
+:root {
+  --light-purple: #c8cadf;
+  --dark-purple: #8f2168;
+  --extra-dark-purple: #4b0d35;
+  --font-primary: 'miracleregular', sans-serif;
+}
+
+html,
+body {
+  font-family: var(--font-primary);
+  background-color: var(--light-purple);
+  color: var(--extra-dark-purple);
+  overflow-y: hidden;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+html {
+  height: -webkit-fill-available;
+}
+
+a {
+  font-style: normal;
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  line-height: 1.1;
+}
