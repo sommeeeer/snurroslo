@@ -1,6 +1,7 @@
 ---
+import NavBar from '../components/NavBar.astro';
 import './../styles/global.scss';
-import logo from '/assets/logo.svg';
+import Logo from './../logos/Logo.astro';
 ---
 
 <!DOCTYPE html>
@@ -15,80 +16,53 @@ import logo from '/assets/logo.svg';
     <title>@snurroslo</title>
   </head>
   <body>
-    <div class="container">
-      <main class="main">
-        <section class="middle">
-          <div class="logo">
-            <img src={logo} alt="Snurr Logo" />
-          </div>
-        </section>
-        <footer class="footer">
-          <a
-            class="footer-link"
-            target="_blank"
-            href="https://www.instagram.com/snurroslo/">@snurroslo</a
-          >
-        </footer>
-      </main>
-    </div>
+    <section class="middle">
+      <div>
+        <Logo />
+      </div>
+      <NavBar />
+    </section>
+    <footer class="footer">
+      <a
+        class="footer-link"
+        target="_blank"
+        href="https://www.instagram.com/snurroslo/">@snurroslo</a
+      >
+    </footer>
   </body>
 </html>
 
 <style>
-  .container {
-    display: flex;
-    height: 100vh;
+  body {
+    display: grid;
+    grid-template-rows: 70% 30%;
+    align-items: center;
     justify-content: center;
+    text-align: center;
   }
 
-  .main {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
+  .logo {
+    font-size: 8rem;
   }
 
   .middle {
     display: flex;
     flex-direction: column;
-    margin-top: auto;
-  }
-
-  .logo {
-    display: flex;
-    justify-content: center;
-  }
-
-  .bottom-link {
-    color: $dark-purple;
-  }
-
-  .footer {
-    margin-top: auto;
-    position: relative;
-    text-align: center;
-    top: -5rem;
-    font-size: 1.2rem;
+    align-items: center;
+    gap: 2rem;
   }
 
   @media screen and (min-width: 34em) {
-    .logo {
-      height: 150px;
-      width: 150px;
-    }
-
     .footer {
       font-size: 2rem;
     }
   }
   @media screen and (min-width: 50em) {
-    .logo {
-      height: 200px;
-      width: 200px;
-    }
-
     .footer {
       font-size: 3rem;
+    }
+    .middle {
+      gap: 4rem;
     }
   }
 </style>

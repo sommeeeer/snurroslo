@@ -21,18 +21,12 @@ body {
   font-family: var(--font-primary);
   background-color: var(--light-purple);
   color: var(--extra-dark-purple);
-  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-}
-html {
-  height: -webkit-fill-available;
-}
-
-a {
+a, .plus {
   font-style: normal;
   display: block;
   font-weight: 600;
